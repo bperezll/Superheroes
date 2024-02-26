@@ -8,7 +8,6 @@ import com.example.superheroes.adapters.SuperheroAdapter
 import com.example.superheroes.data.SuperheroesResponse
 import com.example.superheroes.data.SuperheroesServiceApi
 import com.example.superheroes.databinding.ActivityMainBinding
-import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -37,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             searchSuperheroes(searchText)
         }
 
+        // Adding the SuperheroAdapter
         adapter = SuperheroAdapter()
         binding.recyclerView.adapter = adapter
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
