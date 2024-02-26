@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding:ActivityMainBinding // View Binding declaration
 
-    private lateinit var adapter: SuperheroAdapter
+    private lateinit var adapter: SuperheroAdapter // Adapter declaration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
