@@ -20,7 +20,6 @@ class SuperheroAdapter(private var items:List<Superhero> = listOf(),
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.render(items[position])
         holder.itemView.setOnClickListener { onClickListener(position) }
-        //holder.itemView.setOnClickListener { onClickListener(position) }
     }
 
     fun updateItems(results: List<Superhero>?) {
