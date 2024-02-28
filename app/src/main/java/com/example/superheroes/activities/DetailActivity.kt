@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.example.superheroes.R
 import com.example.superheroes.adapters.SuperheroAdapter
+import com.example.superheroes.data.Biography
 import com.example.superheroes.data.Superhero
 import com.example.superheroes.data.SuperheroesResponse
 import com.example.superheroes.data.SuperheroesServiceApi
@@ -47,8 +48,6 @@ class DetailActivity : AppCompatActivity() {
         // Get the ID of every superhero, only intent needed
 
         superheroId = intent.getStringExtra(EXTRA_ID)
-        //superhero = Superhero(superheroId!!)
-        //detailNavigation = HoroscopeProvider().getHoroscopeIndex(horoscope)
 
         // Display superhero image
 
@@ -81,6 +80,8 @@ class DetailActivity : AppCompatActivity() {
                     Log.i("HTTP", "respuesta correcta :)")
                     superhero = response.body()!!
                     binding.superheroNameTextView.text = superhero.name
+                    binding.superheroFirstAppearanceTextView.text = superhero.biography.firstAppearance
+                    binding.superheroPublisherTextView.text = superhero.biography.publisher
                 } else {
                     Log.i("HTTP", "respuesta erronea :(")
                 }

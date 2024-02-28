@@ -11,4 +11,7 @@ interface SuperheroesServiceApi {
 
     @GET("api/7252591128153666/{id}")
     suspend fun findById(@Path("id") identifier:String) : Response<Superhero>
+
+/*    @GET("api/7252591128153666/{id}/{biography}")
+    suspend fun loadBiography(@Path("biography") identifier: String) : Response<Biography>*/
 }
