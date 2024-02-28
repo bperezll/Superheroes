@@ -24,6 +24,7 @@
         android:layout_weight="8"
         tools:src="@drawable/Batman639"
         android:contentDescription="@null" />
+        <!--tools:src="@tools:sample/backgrounds/scenic"-->
 
     <TextView
         android:id="@+id/superheroFirstAppearanceTextView"
