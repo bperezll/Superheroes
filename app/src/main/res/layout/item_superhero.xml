@@ -15,7 +15,8 @@
             android:id="@+id/photoImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@null" />
+            android:contentDescription="@null"
+            tools:src="@tools:sample/backgrounds/scenic"/>
 
         <TextView
             android:id="@+id/nameTextView"
