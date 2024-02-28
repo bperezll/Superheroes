@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.superheroes.activities.DetailActivity.Companion.EXTRA_ID
 import com.example.superheroes.activities.DetailActivity.Companion.EXTRA_IMAGE
 import com.example.superheroes.activities.DetailActivity.Companion.EXTRA_NAME
@@ -13,14 +12,11 @@ import com.example.superheroes.adapters.SuperheroAdapter
 import com.example.superheroes.data.RetrofitCalls
 import com.example.superheroes.data.Superhero
 import com.example.superheroes.data.SuperheroesResponse
-import com.example.superheroes.data.SuperheroesServiceApi
 import com.example.superheroes.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class MainActivity : AppCompatActivity() {
 

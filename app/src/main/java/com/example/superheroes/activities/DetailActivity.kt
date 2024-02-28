@@ -1,23 +1,15 @@
 package com.example.superheroes.activities
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import com.example.superheroes.R
-import com.example.superheroes.adapters.SuperheroAdapter
-import com.example.superheroes.data.Biography
+import androidx.appcompat.app.AppCompatActivity
 import com.example.superheroes.data.RetrofitCalls
 import com.example.superheroes.data.Superhero
-import com.example.superheroes.data.SuperheroesResponse
-import com.example.superheroes.data.SuperheroesServiceApi
 import com.example.superheroes.databinding.ActivityDetailBinding
-import com.example.superheroes.databinding.ActivityMainBinding
 import com.squareup.picasso.Picasso
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
 
 class DetailActivity : AppCompatActivity() {
 
