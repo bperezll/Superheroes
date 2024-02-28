@@ -10,6 +10,7 @@ import com.example.superheroes.activities.DetailActivity.Companion.EXTRA_ID
 import com.example.superheroes.activities.DetailActivity.Companion.EXTRA_IMAGE
 import com.example.superheroes.activities.DetailActivity.Companion.EXTRA_NAME
 import com.example.superheroes.adapters.SuperheroAdapter
+import com.example.superheroes.data.RetrofitCalls
 import com.example.superheroes.data.Superhero
 import com.example.superheroes.data.SuperheroesResponse
 import com.example.superheroes.data.SuperheroesServiceApi
@@ -64,15 +65,11 @@ class MainActivity : AppCompatActivity() {
 
     // Search superheroes from an API using Retrofit
     private fun searchSuperheroes(query: String) {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://superheroapi.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
 
-        val service: SuperheroesServiceApi = retrofit.create(SuperheroesServiceApi::class.java)
+        RetrofitCalls()
 
         CoroutineScope(Dispatchers.IO).launch {
-            val response: Response<SuperheroesResponse> = service.searchByName(query)
+            val response: Response<SuperheroesResponse> = RetrofitCalls().service.searchByName(query)
 
             runOnUiThread {
                 if (response != null) {

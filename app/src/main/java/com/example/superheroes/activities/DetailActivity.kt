@@ -6,6 +6,7 @@ import android.util.Log
 import com.example.superheroes.R
 import com.example.superheroes.adapters.SuperheroAdapter
 import com.example.superheroes.data.Biography
+import com.example.superheroes.data.RetrofitCalls
 import com.example.superheroes.data.Superhero
 import com.example.superheroes.data.SuperheroesResponse
 import com.example.superheroes.data.SuperheroesServiceApi
@@ -62,16 +63,12 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private fun findSuperheroById(superheroId: String) {
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://superheroapi.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
 
-        val service: SuperheroesServiceApi = retrofit.create(SuperheroesServiceApi::class.java)
+        RetrofitCalls()
 
         CoroutineScope(Dispatchers.IO).launch {
             // Llamada en segundo plano
-            val response = service.findById(superheroId)
+            val response = RetrofitCalls().service.findById(superheroId)
 
             runOnUiThread {
                 // Modificar UI
