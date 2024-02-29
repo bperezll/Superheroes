@@ -27,6 +27,8 @@
             android:layout_height="40dp"
             android:src="@drawable/ic_search"
             android:background="@color/purple_700"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:theme="@android:style/ThemeOverlay.Material.Dark"
             android:contentDescription="@string/search_button_description" />
 
     </LinearLayout>
