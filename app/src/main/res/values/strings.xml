@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Superheroes</string>
+    <string name="search_hint">Search superheroes</string>
+    <string name="search_button_description">Start search</string>
 </resources>
